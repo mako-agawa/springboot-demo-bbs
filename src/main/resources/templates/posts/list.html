@@ -8,10 +8,11 @@
 
 
 <main layout:fragment="content">
-    <h1>Post List</h1>
+    <h1>こんにちは <span th:text="${loginName}"></span>さん</h1>
     <h2>新規投稿</h2>
     <a href="/posts/new" class="btn btn-primary mb-3">New Post</a>
     <h2>掲示板一覧</h2>
+
     <table class="table table-striped">
         <thead>
             <tr>
@@ -30,7 +31,8 @@
                 </td>
                 <td class="text-end">
                     <a th:href="@{/posts/{id}/edit(id=${post.id})}" class="btn btn-primary btn-sm">Edit</a>
-                    <form th:action="@{/posts/{id}/delete(id=${post.id})}" method="post" style="display: inline;">
+                    <form th:action="@{/posts/{id}/delete(id=${post.id})}" method="post" style="display:inline;">
+                        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                     </form>
                 </td>
