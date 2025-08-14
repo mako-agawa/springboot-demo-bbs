@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{layout}">
+
+<head>
+    <title layout:fragment="title">Home</title>
+</head>
+<main layout:fragment="content">
+    <h1>掲示板アプリへようこそ</h1>
+    <div class="text-centert">
+        <a href="/auth/login" class="btn btn-primary">Login</a>
+        <a href="/auth/register" class="btn btn-secondary">Regiser</a>
+    </div>
+</main>
