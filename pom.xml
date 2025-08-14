@@ -97,6 +97,7 @@
         <version>3.11.0</version>
         <configuration>
           <release>${java.version}</release>
+          <compilerArgument>-parameters</compilerArgument>
           <annotationProcessorPaths>
             <path>
               <groupId>org.projectlombok</groupId>
